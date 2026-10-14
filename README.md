@@ -14,11 +14,11 @@
 
 ---
 
-## 🧠 Habilidades & Stack
+## Habilidades & Stack
 
 <p align="center"><em>As tecnologias que eu uso no dia a dia para construir soluções web eficientes.</em></p>
 
-<h3 align="center">⚙️ Back-end & Linguagens</h3>
+<h3 align="center">Back-end & Linguagens</h3>
 
 <p align="center">
   <img src="https://img.shields.io/badge/PHP-7C3AED?style=for-the-badge&logo=php&logoColor=white" alt="PHP" />
@@ -38,7 +38,7 @@
   <img src="https://img.shields.io/badge/C%2B%2B-A855F7?style=for-the-badge&logo=cplusplus&logoColor=white" alt="C++" />
 </p>
 
-<h3 align="center">🗄️ Banco de Dados & Ferramentas</h3>
+<h3 align="center">Banco de Dados & Ferramentas</h3>
 
 <p align="center">
   <img src="https://img.shields.io/badge/MySQL-7C3AED?style=for-the-badge&logo=mysql&logoColor=white" alt="MySQL" />
@@ -48,7 +48,7 @@
   <img src="https://img.shields.io/badge/Git-8B5CF6?style=for-the-badge&logo=git&logoColor=white" alt="Git" />
 </p>
 
-<h3 align="center">🎨 Front-end</h3>
+<h3 align="center">Front-end</h3>
 
 <p align="center">
   <img src="https://img.shields.io/badge/HTML5-C026D3?style=for-the-badge&logo=html5&logoColor=white" alt="HTML5" />
@@ -58,7 +58,7 @@
 
 ---
 
-## 👋 Sobre mim
+## Sobre mim
 
 > **Desenvolvedor Back End | PHP • Python • NODE.js • JavaScript • Docker • MySQL**
 > Apaixonado por tecnologia e pela construção de soluções web eficientes.
@@ -78,14 +78,14 @@ const arthur = {
 };
 ```
 
-- 🔭 Atuo no desenvolvimento back end, criando APIs e aplicações web com PHP, Python e Node.js
-- 🌱 Aprofundando meus conhecimentos em TypeScript, Docker e arquitetura de software
-- 💬 Me pergunte sobre PHP, Python, Node.js, MySQL, Docker e Git
-- ⚡ Curiosidade: também programo em C e C++ e gosto de entender como as coisas funcionam por baixo
+- Atuo no desenvolvimento back end, criando APIs e aplicações web com PHP, Python e Node.js
+- Aprofundando meus conhecimentos em TypeScript, Docker e arquitetura de software
+- Me pergunte sobre PHP, Python, Node.js, MySQL, Docker e Git
+- Curiosidade: também programo em C e C++ e gosto de entender como as coisas funcionam por baixo
 
 ---
 
-## 📊 Estatísticas do GitHub
+## Estatísticas do GitHub
 
 <p align="center">
   <img height="170" alt="Estatísticas do GitHub" src="https://github-readme-stats.vercel.app/api?username=ThurStelZner&show_icons=true&hide_border=true&title_color=C77DFF&icon_color=FF3EA5&text_color=D8B4FE&bg_color=45,1A0533,3B0764&border_color=9333EA" />
@@ -102,7 +102,7 @@ const arthur = {
 
 ---
 
-## 🧊 Contribuições em 3D
+## Contribuições em 3D
 
 <p align="center">
   <picture>
@@ -112,11 +112,11 @@ const arthur = {
   </picture>
 </p>
 
-<p align="center"><em>Calendário de contribuições em 3D, gerado automaticamente todos os dias — em gradiente roxo → magenta.</em></p>
+<p align="center"><em>Calendário de contribuições em 3D, gerado automaticamente todos os dias — em gradiente roxo e magenta.</em></p>
 
 ---
 
-## 🐍 Contribuições em movimento
+## Contribuições em movimento
 
 <p align="center">
   <picture>
@@ -128,7 +128,7 @@ const arthur = {
 
 ---
 
-## 💬 Vamos conversar?
+## Vamos conversar?
 
 <p align="center"><em>Aberto a conversas sobre tecnologia, back end, open source e novas ideias.</em></p>
 
