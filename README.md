@@ -7,7 +7,7 @@
 </div>
 
 <p align="center">
-  <img src="https://api.visitorbadge.io/api/visitors?path=https%3A%2F%2Fgithub.com%2FThurStelZner&label=visitas&labelColor=%23A78BFA&countColor=%23D946EF" alt="Contador de visitas" />
+  <img src="https://api.visitorbadge.io/api/visitors?path=https%3A%2F%2Fgithub.com%2FThurStelZner&label=visitas&labelColor=%23D946EF&countColor=%23D946EF" alt="Contador de visitas" />
   &nbsp;
   <a href="mailto:arthurstelzner@gmail.com"><img src="https://img.shields.io/badge/Email-Fale+comigo-D946EF?style=for-the-badge&logo=gmail&logoColor=white" alt="E-mail" /></a>
 </p>
