@@ -1,4 +1,4 @@
-name: Gerar cobrinha de contribuiÃ§Ãµes
+name: Gerar cobrinha de contribuições
 
 on:
   schedule:
@@ -18,8 +18,8 @@ jobs:
         with:
           github_user_name: ${{ github.repository_owner }}
           outputs: |
-            dist/github-contribution-grid-snake.svg?color_snake=9333EA&color_dots=F3E8FF,E9D5FF,D8B4FE,C084FC,A855F7
-            dist/github-contribution-grid-snake-dark.svg?color_snake=FF3EA5&color_dots=2E1065,5B21B6,9333EA,D946EF,FF3EA5
+            dist/github-contribution-grid-snake.svg?color_snake=%239333EA&color_dots=%23F3E8FF,%23E9D5FF,%23D8B4FE,%23C084FC,%23A855F7
+            dist/github-contribution-grid-snake-dark.svg?color_snake=%23FF3EA5&color_dots=%232E1065,%235B21B6,%239333EA,%23D946EF,%23FF3EA5
 
       # publica os SVGs no branch "output", referenciado pelo README
       - name: Publicar SVGs no branch output
