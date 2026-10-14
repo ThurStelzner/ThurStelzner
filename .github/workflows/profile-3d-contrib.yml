@@ -1,4 +1,4 @@
-name: Gerar grÃ¡fico 3D de contribuiÃ§Ãµes
+name: Gerar gráfico 3D de contribuições
 
 on:
   schedule:
