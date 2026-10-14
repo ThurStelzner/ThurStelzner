@@ -7,7 +7,7 @@
 </div>
 
 <p align="center">
-  <img src="https://api.visitorbadge.io/api/combined?path=https%3A%2F%2Fgithub.com%2FThurStelZner&label=Visitantes&labelColor=%237C3AED&countColor=%23D946EF" alt="Contador de visitas" />
+  <img src="https://api.visitorbadge.io/api/visitors?path=https%3A%2F%2Fgithub.com%2FThurStelZner&label=&color=%23D946EF" alt="Contador de visitas" />
   &nbsp;
   <a href="mailto:arthurstelzner@gmail.com"><img src="https://img.shields.io/badge/Email-Fale+comigo-D946EF?style=for-the-badge&logo=gmail&logoColor=white" alt="E-mail" /></a>
 </p>
@@ -63,7 +63,7 @@
 > **Desenvolvedor Back End | PHP • Python • NODE.js • JavaScript • Docker • MySQL**
 > Apaixonado por tecnologia e pela construção de soluções web eficientes.
 
-Sou desenvolvedor back end e meu dia a dia é transformar ideias em aplicações web que funcionam de verdade. Trabalho principalmente com **PHP**, **Python** e **Node.js**, criando APIs, automações e aplicações escaláveis — sempre com **Docker** para garantir ambientes consistentes e **MySQL** para manter os dados bem estruturados. Também atuo no front-end com **HTML5**, **CSS5** e **JavaScript/TypeScript** quando o projeto pede.
+Sou desenvolvedor back end e meu dia a dia é transformar ideias em aplicações web que funcionam de verdade. Trabalho principalmente com **PHP**, **Python** e **Node.js**, criando APIs, automações e aplicações escaláveis — sempre com **Docker** para garantir ambientes consistentes e **MySQL** para manter os dados bem estruturados. Também atuo no front-end com **HTML5**, **CSS3** e **JavaScript/TypeScript** quando o projeto pede.
 
 Apaixonado por tecnologia, estou sempre buscando aprender mais, escrever código limpo e construir soluções que realmente façam a diferença.
 
@@ -102,7 +102,7 @@ const arthur = {
 
 ---
 
-## Contribuições em 3D
+## Calendário de contribuições
 
 <p align="center">
   <picture>
@@ -111,8 +111,6 @@ const arthur = {
     <img alt="Gráfico 3D de contribuições do GitHub" src="https://raw.githubusercontent.com/ThurStelZner/ThurStelZner/output-3d-contrib/night.svg" width="85%" />
   </picture>
 </p>
-
-<p align="center"><em>Calendário de contribuições em 3D, gerado automaticamente todos os dias — em gradiente roxo e magenta.</em></p>
 
 ---
 
@@ -139,7 +137,7 @@ const arthur = {
   &nbsp;
   <a href="https://thurstelzner.github.io/MeuPortfolio/"><img src="https://img.shields.io/badge/Portf%C3%B3lio-9333EA?style=for-the-badge&logo=googlechrome&logoColor=white" alt="Portfólio" /></a>
   &nbsp;
-  <img src="https://img.shields.io/badge/Discord-thuzin%5Fn-8B5CF6?style=for-the-badge&logo=discord&logoColor=white" alt="Discord: thuzin_n" />
+  <img src="https://img.shields.io/badge/Discord-8B5CF6?style=for-the-badge&logo=discord&logoColor=white" alt="Discord" />
   &nbsp;
   <a href="https://github.com/ThurStelZner"><img src="https://img.shields.io/badge/GitHub-6D28D9?style=for-the-badge&logo=github&logoColor=white" alt="GitHub" /></a>
 </p>
