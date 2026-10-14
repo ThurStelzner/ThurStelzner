@@ -1,0 +1,31 @@
+name: Gerar cobrinha de contribuiÃ§Ãµes
+
+on:
+  schedule:
+    - cron: "0 */12 * * *" # a cada 12 horas
+  workflow_dispatch: # permite rodar manualmente
+
+permissions:
+  contents: write
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v5
+
+      - uses: Platane/snk@v3
+        with:
+          github_user_name: ${{ github.repository_owner }}
+          outputs: |
+            dist/github-contribution-grid-snake.svg?color_snake=9333EA&color_dots=F3E8FF,E9D5FF,D8B4FE,C084FC,A855F7
+            dist/github-contribution-grid-snake-dark.svg?color_snake=FF3EA5&color_dots=2E1065,5B21B6,9333EA,D946EF,FF3EA5
+
+      # publica os SVGs no branch "output", referenciado pelo README
+      - name: Publicar SVGs no branch output
+        uses: crazy-max/ghaction-github-pages@v3.1.0
+        with:
+          target_branch: output
+          build_dir: dist
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
