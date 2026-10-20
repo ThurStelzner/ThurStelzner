@@ -60,7 +60,7 @@
 
 ## Sobre mim
 
-> **Desenvolvedor Back End | PHP • Python • NODE.js • JavaScript • Docker • MySQL**
+> **Desenvolvedor Back End | PHP • Python • Node.js • JavaScript • Docker • MySQL**
 > Apaixonado por tecnologia e pela construção de soluções web eficientes.
 
 Sou desenvolvedor back end e meu dia a dia é transformar ideias em aplicações web que funcionam de verdade. Trabalho principalmente com **PHP**, **Python** e **Node.js**, criando APIs, automações e aplicações escaláveis — sempre com **Docker** para garantir ambientes consistentes e **MySQL** para manter os dados bem estruturados. Também atuo no front-end com **HTML5**, **CSS3** e **JavaScript/TypeScript** quando o projeto pede.
