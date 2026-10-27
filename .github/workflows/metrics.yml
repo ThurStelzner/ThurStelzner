@@ -23,8 +23,8 @@ jobs:
       - name: Preparar pasta de saída
         run: mkdir -p metrics
 
-      # Token pessoal (secret GH_PAT) para incluir repositórios privados.
-      # Se o segredo ainda não existir, usa o token padrão do Actions.
+      # O token pessoal (secret GH_PAT) faz os cards incluírem repositórios
+      # privados. Se o segredo ainda não existir, usa o token padrão do Actions.
       - name: Estatísticas gerais
         uses: lowlighter/metrics@latest
         with:
@@ -34,7 +34,7 @@ jobs:
           base: header, activity, community, repositories, metadata
           config_timezone: America/Sao_Paulo
           filename: metrics/estatisticas.svg
-          output_action: none
+          output_action: commit
 
       - name: Linguagens mais usadas
         uses: lowlighter/metrics@latest
@@ -45,7 +45,7 @@ jobs:
           base: ""
           config_timezone: America/Sao_Paulo
           filename: metrics/linguagens.svg
-          output_action: none
+          output_action: commit
           plugin_languages: yes
           plugin_languages_details: bytes-size, percentage
           plugin_languages_limit: 8
@@ -60,18 +60,9 @@ jobs:
           base: ""
           config_timezone: America/Sao_Paulo
           filename: metrics/habitos.svg
-          output_action: none
+          output_action: commit
           plugin_habits: yes
           plugin_habits_facts: yes
           plugin_habits_charts: yes
           plugin_habits_charts_type: graph
           plugin_habits_trim: yes
-
-      # publica os SVGs no branch "output-metrics", referenciado pelo README
-      - name: Publicar SVGs no branch output-metrics
-        uses: crazy-max/ghaction-github-pages@v3.1.0
-        with:
-          target_branch: output-metrics
-          build_dir: metrics
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

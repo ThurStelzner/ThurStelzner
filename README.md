@@ -90,15 +90,15 @@ const arthur = {
 <p align="center"><em>Incluindo atividade em repositórios públicos e privados.</em></p>
 
 <p align="center">
-  <img alt="Estatísticas do GitHub (públicas e privadas)" src="https://raw.githubusercontent.com/ThurStelZner/ThurStelZner/output-metrics/estatisticas.svg" />
+  <img alt="Estatísticas do GitHub (públicas e privadas)" src="https://raw.githubusercontent.com/ThurStelZner/ThurStelZner/main/metrics/estatisticas.svg" />
 </p>
 
 <p align="center">
-  <img alt="Linguagens mais utilizadas (públicas e privadas)" src="https://raw.githubusercontent.com/ThurStelZner/ThurStelZner/output-metrics/linguagens.svg" />
+  <img alt="Linguagens mais utilizadas (públicas e privadas)" src="https://raw.githubusercontent.com/ThurStelZner/ThurStelZner/main/metrics/linguagens.svg" />
 </p>
 
 <p align="center">
-  <img alt="Atividade e hábitos de código (públicas e privadas)" src="https://raw.githubusercontent.com/ThurStelZner/ThurStelZner/output-metrics/habitos.svg" />
+  <img alt="Atividade e hábitos de código (públicas e privadas)" src="https://raw.githubusercontent.com/ThurStelZner/ThurStelZner/main/metrics/habitos.svg" />
 </p>
 
 <p align="center">
