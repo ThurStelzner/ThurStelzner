@@ -1,0 +1,57 @@
+name: Atualizar cards de estatísticas (público + privado)
+
+on:
+  schedule:
+    - cron: "12 */6 * * *" # a cada 6 horas
+  workflow_dispatch: # permite rodar manualmente
+  push:
+    branches:
+      - main
+    paths:
+      - ".github/workflows/cards.yml"
+      - "README.md"
+
+permissions:
+  contents: write
+
+jobs:
+  cards:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v5
+
+      - name: Criar pasta profile
+        run: mkdir -p profile
+
+      - name: Gerar card de estatísticas
+        uses: stats-organization/github-readme-stats-action@v2
+        with:
+          card: stats
+          options: "username=${{ github.repository_owner }}&show_icons=true&hide_border=true&title_color=C77DFF&icon_color=FF3EA5&text_color=D8B4FE&bg_color=45,1A0533,3B0764&border_color=9333EA"
+          path: profile/estatisticas.svg
+          token: ${{ secrets.GH_PAT || secrets.GITHUB_TOKEN }}
+          fail_on_error: true
+
+      - name: Gerar card de linguagens
+        uses: stats-organization/github-readme-stats-action@v2
+        with:
+          card: top-langs
+          options: "username=${{ github.repository_owner }}&layout=compact&langs_count=10&hide_border=true&title_color=C77DFF&icon_color=FF3EA5&text_color=D8B4FE&bg_color=45,1A0533,3B0764&border_color=9333EA"
+          path: profile/linguagens.svg
+          token: ${{ secrets.GH_PAT || secrets.GITHUB_TOKEN }}
+          fail_on_error: true
+
+      - name: Gerar card de sequência
+        uses: DenverCoder1/github-readme-streak-stats@v1
+        with:
+          options: "user=${{ github.repository_owner }}&hide_border=true&background=45,1A0533,3B0764&border=9333EA&stroke=7C3AED&ring=D946EF&fire=FF3EA5&currStreakNum=F0ABFC&currStreakLabel=C77DFF&sideNums=D8B4FE&sideLabels=A78BFA&dates=8B7AA8&locale=pt_BR&date_format=j%2Fn%2F%5BY%5D&disable_animations=true"
+          path: profile/sequencia.svg
+          token: ${{ secrets.GH_PAT || secrets.GITHUB_TOKEN }}
+
+      - name: Publicar cards atualizados
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add profile/*.svg
+          git commit -m "Atualiza cards de estatísticas (público + privado)" || exit 0
+          git push

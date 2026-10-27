@@ -88,12 +88,12 @@ const arthur = {
 ## Estatísticas do GitHub
 
 <p align="center">
-  <img height="170" alt="Estatísticas do GitHub" src="https://github-readme-stats.vercel.app/api?username=ThurStelZner&show_icons=true&hide_border=true&title_color=C77DFF&icon_color=FF3EA5&text_color=D8B4FE&bg_color=45,1A0533,3B0764&border_color=9333EA" />
-  <img height="170" alt="Linguagens mais utilizadas" src="https://github-readme-stats.vercel.app/api/top-langs/?username=ThurStelZner&layout=compact&langs_count=10&hide_border=true&title_color=C77DFF&icon_color=FF3EA5&text_color=D8B4FE&bg_color=45,1A0533,3B0764&border_color=9333EA" />
+  <img height="170" alt="Estatísticas do GitHub (públicas e privadas)" src="./profile/estatisticas.svg" />
+  <img height="170" alt="Linguagens mais utilizadas (públicas e privadas)" src="./profile/linguagens.svg" />
 </p>
 
 <p align="center">
-  <img alt="Sequência de contribuições" src="https://streak-stats.demolab.com?user=ThurStelZner&hide_border=true&background=45,1A0533,3B0764&border=9333EA&stroke=7C3AED&ring=D946EF&fire=FF3EA5&currStreakNum=F0ABFC&currStreakLabel=C77DFF&sideNums=D8B4FE&sideLabels=A78BFA&dates=8B7AA8&locale=pt_BR&date_format=j%2Fn%2F%5BY%5D" />
+  <img alt="Sequência de contribuições (públicas e privadas)" src="./profile/sequencia.svg" />
 </p>
 
 <p align="center">

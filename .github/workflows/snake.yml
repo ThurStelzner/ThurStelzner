@@ -7,6 +7,8 @@ on:
   push:
     branches:
       - main # regenera a cada push na main (README, workflows, etc.)
+    paths-ignore:
+      - "profile/**" # cards de estatísticas não afetam a cobrinha
 
 permissions:
   contents: write

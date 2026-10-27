@@ -7,6 +7,8 @@ on:
   push:
     branches:
       - main # regenera a cada push na main (README, workflows, conf, etc.)
+    paths-ignore:
+      - "profile/**" # cards de estatísticas não afetam o gráfico 3D
 
 permissions:
   contents: write
