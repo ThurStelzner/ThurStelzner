@@ -56,6 +56,18 @@
   <img src="https://img.shields.io/badge/CSS3-9333EA?style=for-the-badge&logo=css3&logoColor=white" alt="CSS3" />
 </p>
 
+<h3 align="center">Cursos &amp; Certificações</h3>
+
+<p align="center"><em>Cibersegurança — Cisco Networking Academy</em></p>
+
+<p align="center">
+  <img src="https://img.shields.io/badge/Introdu%C3%A7%C3%A3o_%C3%A0_Ciberseguran%C3%A7a-Cisco-D946EF?style=for-the-badge&logo=cisco&logoColor=white" alt="Introdução à Cibersegurança — Cisco Networking Academy" />
+  <br/>
+  <img src="https://img.shields.io/badge/Seguran%C3%A7a_de_Endpoint-Cisco-7C3AED?style=for-the-badge&logo=cisco&logoColor=white" alt="Segurança de Endpoint — Cisco Networking Academy" />
+  <br/>
+  <img src="https://img.shields.io/badge/Defesa_de_Rede-Cisco-8B5CF6?style=for-the-badge&logo=cisco&logoColor=white" alt="Defesa de Rede — Cisco Networking Academy" />
+</p>
+
 ---
 
 ## Sobre mim
