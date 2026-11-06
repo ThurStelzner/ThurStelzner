@@ -48,8 +48,8 @@ jobs:
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
 
-          for i in $(seq 1 66); do
-            echo "::group::Verificação $i/66"
+          for i in $(seq 1 60); do
+            echo "::group::Verificação $i/60"
 
             if [ "$i" -eq 1 ] && [ "${FORCE_INPUT:-false}" = "true" ]; then
               export FORCE_PALETTE=true
@@ -98,7 +98,7 @@ jobs:
 
             echo "::endgroup::"
 
-            if [ "$i" -lt 66 ]; then
+            if [ "$i" -lt 60 ]; then
               sleep 300
             fi
           done
