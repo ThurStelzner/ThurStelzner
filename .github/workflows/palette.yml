@@ -33,7 +33,9 @@ jobs:
     runs-on: ubuntu-latest
     timeout-minutes: 355
     env:
-      GH_TOKEN: ${{ secrets.GH_PAT || secrets.GITHUB_TOKEN }}
+      # GITHUB_TOKEN basta para workflow_dispatch e evita depender do escopo
+      # "workflow" de um PAT clássico.
+      GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       FORCE_INPUT: ${{ github.event.inputs.force_palette || 'false' }}
     steps:
       - uses: actions/checkout@v5
