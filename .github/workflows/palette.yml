@@ -51,6 +51,8 @@ jobs:
       - name: Gerar nova paleta
         if: steps.check.outputs.changed == 'true'
         id: palette
+        env:
+          FORCE_PALETTE: ${{ github.event.inputs.force_palette || 'false' }}
         run: python .github/scripts/palette.py
 
       - name: Publicar paleta
