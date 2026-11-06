@@ -445,6 +445,36 @@ def _apply_readme(text: str, old_colors: dict[str, str], new_colors: dict[str, s
     return pattern.sub(replace, text)
 
 
+ASSET_VERSION_PATHS: tuple[str, ...] = (
+    "profile/estatisticas.svg",
+    "profile/linguagens.svg",
+    "profile/sequencia.svg",
+    "output-3d-contrib/day.svg",
+    "output-3d-contrib/night.svg",
+    "output/github-contribution-grid-snake.svg",
+    "output/github-contribution-grid-snake-dark.svg",
+)
+
+
+def _apply_asset_versions(text: str, version: str) -> str:
+    """Adiciona ?v=<versão> nas imagens geradas para furar cache do GitHub."""
+    for asset in ASSET_VERSION_PATHS:
+        pattern = re.compile(re.escape(asset) + r'(\?[^"\s<>)]*)?')
+
+        def replace(match: re.Match[str], asset: str = asset) -> str:
+            query = match.group(1) or ""
+            params = [
+                param
+                for param in query.lstrip("?").split("&")
+                if param and not param.startswith("v=")
+            ]
+            params.append(f"v={version}")
+            return f"{asset}?{'&'.join(params)}"
+
+        text = pattern.sub(replace, text)
+    return text
+
+
 def _write_3d_config(path: Path, colors: dict[str, str]) -> None:
     c = colors
     light_bg = _mix(c["accent"], "#FFFFFF", 0.90)
@@ -628,6 +658,7 @@ def main() -> int:
         if readme_path.exists():
             original = readme_path.read_text(encoding="utf-8")
             updated = _apply_readme(original, old_colors or {}, colors)
+            updated = _apply_asset_versions(updated, digest[:12])
             if updated != original:
                 readme_path.write_text(updated, encoding="utf-8")
         _write_palette(args.palette, owner, digest, colors)
