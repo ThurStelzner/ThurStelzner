@@ -9,11 +9,11 @@
         aria-labelledby="descId"
       >
         <title id="titleId">Arthur Iantas Stelzner&#39;s GitHub Stats, Rank: C</title>
-        <desc id="descId">Total Stars Earned: 1, Total Commits  (last year) : 166, Total PRs: 0, Total Issues: 0, Contributed to (last year): 2</desc>
+        <desc id="descId">Total Stars Earned: 1, Total Commits  (last year) : 167, Total PRs: 0, Total Issues: 0, Contributed to (last year): 2</desc>
         <style>
           .header {
             font: 600 18px 'Segoe UI', Ubuntu, Sans-Serif;
-            fill: #D9A775;
+            fill: #CAE6F2;
             animation: fadeInAnimation 0.8s ease-in-out forwards;
           }
           @supports(-moz-appearance: auto) {
@@ -22,7 +22,7 @@
           }
           
     .stat {
-      font: 600 14px 'Segoe UI', Ubuntu, "Helvetica Neue", Sans-Serif; fill: #F3E6DD;
+      font: 600 14px 'Segoe UI', Ubuntu, "Helvetica Neue", Sans-Serif; fill: #DCE6F4;
     }
     @supports(-moz-appearance: auto) {
       /* Selector detects Firefox */
@@ -33,7 +33,7 @@
       animation: fadeInAnimation 0.3s ease-in-out forwards;
     }
     .rank-text {
-      font: 800 24px 'Segoe UI', Ubuntu, Sans-Serif; fill: #F3E6DD;
+      font: 800 24px 'Segoe UI', Ubuntu, Sans-Serif; fill: #DCE6F4;
       animation: scaleInAnimation 0.3s ease-in-out forwards;
     }
     .rank-percentile-header {
@@ -46,18 +46,18 @@
     .not_bold { font-weight: 400 }
     .bold { font-weight: 700 }
     .icon {
-      fill: #E4C789;
+      fill: #AACDEE;
       display: block;
     }
 
     .rank-circle-rim {
-      stroke: #D9A775;
+      stroke: #CAE6F2;
       fill: none;
       stroke-width: 6;
       opacity: 0.2;
     }
     .rank-circle {
-      stroke: #D9A775;
+      stroke: #CAE6F2;
       stroke-dasharray: 250;
       fill: none;
       stroke-width: 6;
@@ -73,7 +73,7 @@
         stroke-dashoffset: 251.32741228718345;
       }
       to {
-        stroke-dashoffset: 226.37941052035336;
+        stroke-dashoffset: 226.30621437284736;
       }
     }
   
@@ -110,7 +110,7 @@
             gradientTransform="rotate(45)"
             gradientUnits="userSpaceOnUse"
           >
-            <stop offset="0%" stop-color="#160F0E" />,<stop offset="100%" stop-color="#422F22" />
+            <stop offset="0%" stop-color="#060507" />,<stop offset="100%" stop-color="#212636" />
           </linearGradient>
           
         </defs>
@@ -123,7 +123,7 @@
           y="0.5"
           rx="4.5"
           height="99%"
-          stroke="#815333"
+          stroke="#506882"
           width="466"
           fill="url(#gradient)"
           stroke-opacity="0"
@@ -191,7 +191,7 @@
         x="224.01"
         y="12.5"
         data-testid="commits"
-      >166</text>
+      >167</text>
     </g>
   </g><g transform="translate(0, 50)">
     <g class="stagger" style="animation-delay: 750ms" transform="translate(25, 0)">
