@@ -1,20 +1,20 @@
 {
   "version": 1,
   "source": "https://github.com/ThurStelzner.png?size=460",
-  "avatar_sha256": "8793940f16203d0d39fbfe43fb15876128597b0d7f03a282a02ba6166922f9b8",
-  "updated_at": "2026-11-06T17:36:35+00:00",
+  "avatar_sha256": "b54669925dde0b0ce68a3fdbef45fcea8e6ce2691bf46e842533862a7ee3df28",
+  "updated_at": "2026-11-06T18:59:40+00:00",
   "colors": {
-    "bg_dark": "#060507",
-    "bg_mid": "#212636",
-    "bg_soft": "#2B598F",
-    "primary": "#273E5C",
-    "secondary": "#564C55",
-    "tertiary": "#233044",
-    "accent_dark": "#5B698A",
-    "accent": "#CAE6F2",
-    "highlight": "#AACDEE",
-    "text": "#DCE6F4",
-    "text_muted": "#C4AEAA",
-    "border": "#506882"
+    "bg_dark": "#140D0C",
+    "bg_mid": "#3E281C",
+    "bg_soft": "#5F3723",
+    "primary": "#98593A",
+    "secondary": "#715644",
+    "tertiary": "#8F6B56",
+    "accent_dark": "#784628",
+    "accent": "#B87961",
+    "highlight": "#D2AA89",
+    "text": "#F2E5DE",
+    "text_muted": "#CDC1AF",
+    "border": "#A06144"
   }
 }

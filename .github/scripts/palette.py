@@ -565,6 +565,7 @@ def _parse_args() -> argparse.Namespace:
     parser.add_argument("--readme", type=Path, default=DEFAULT_README_PATH)
     parser.add_argument("--config-3d", type=Path, default=DEFAULT_3D_CONFIG_PATH)
     parser.add_argument("--outputs-only", action="store_true", help="Apenas lê a paleta e gera outputs")
+    parser.add_argument("--check", action="store_true", help="Apenas verifica se o avatar mudou")
     parser.add_argument("--force", action="store_true", help="Recalcula mesmo se o avatar não mudou")
     return parser.parse_args()
 
@@ -594,6 +595,11 @@ def main() -> int:
         return 0
 
     changed = force or old_doc is None or old_doc.get("avatar_sha256") != digest
+
+    if args.check:
+        colors = old_colors or dict(DEFAULT_PALETTE)
+        _emit_outputs(colors, owner, changed)
+        return 0
 
     if not changed and old_colors:
         colors = old_colors

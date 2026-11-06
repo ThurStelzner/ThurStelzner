@@ -1,0 +1,77 @@
+name: Detectar troca de avatar e atualizar paleta
+
+on:
+  schedule:
+    - cron: "*/5 * * * *" # a cada 5 minutos (mínimo do GitHub)
+  workflow_dispatch:
+    inputs:
+      force_palette:
+        description: "Recalcular a paleta mesmo sem mudança no avatar"
+        type: boolean
+        default: false
+  push:
+    branches:
+      - main
+    paths:
+      - ".github/workflows/palette.yml"
+      - ".github/scripts/palette.py"
+      - ".github/palette.json"
+      - "README.md"
+
+permissions:
+  contents: write
+  actions: write
+
+concurrency:
+  group: profile-palette
+  cancel-in-progress: false
+
+jobs:
+  palette:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v5
+
+      - name: Verificar hash do avatar
+        id: check
+        env:
+          FORCE_PALETTE: ${{ github.event.inputs.force_palette || 'false' }}
+        run: python3 .github/scripts/palette.py --check
+
+      - name: Configurar Python
+        if: steps.check.outputs.changed == 'true'
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Instalar Pillow
+        if: steps.check.outputs.changed == 'true'
+        run: python -m pip install --disable-pip-version-check pillow
+
+      - name: Gerar nova paleta
+        if: steps.check.outputs.changed == 'true'
+        id: palette
+        run: python .github/scripts/palette.py
+
+      - name: Publicar paleta
+        if: steps.palette.outputs.changed == 'true'
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add README.md .github/palette.json conf/github-profile-3d-contrib.json
+          if git diff --cached --quiet; then
+            echo "Sem alterações de paleta para publicar."
+            exit 0
+          fi
+          git commit -m "Atualiza paleta do perfil a partir do avatar"
+          git push
+
+      - name: Atualizar cards, 3D e cobrinha
+        if: steps.palette.outputs.changed == 'true'
+        continue-on-error: true
+        env:
+          GH_TOKEN: ${{ secrets.GH_PAT || secrets.GITHUB_TOKEN }}
+        run: |
+          gh workflow run cards.yml --ref main
+          gh workflow run profile-3d-contrib.yml --ref main
+          gh workflow run snake.yml --ref main
