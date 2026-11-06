@@ -1,15 +1,15 @@
 <div align="center">
-  <img src="https://capsule-render.vercel.app/api?type=waving&height=230&color=0:160F0E,50:64371D,100:86583C&text=Arthur%20Stelzner&fontColor=F3E6DD&fontSize=54&animation=fadeIn&fontAlignY=32&desc=Desenvolvedor%20Back%20End&descAlignY=52&descSize=18&descColor=E4C789" width="100%" alt="Arthur Stelzner — Desenvolvedor Back End" />
+  <img src="https://capsule-render.vercel.app/api?type=waving&height=230&color=0:060507,50:273E5C,100:233044&text=Arthur%20Stelzner&fontColor=DCE6F4&fontSize=54&animation=fadeIn&fontAlignY=32&desc=Desenvolvedor%20Back%20End&descAlignY=52&descSize=18&descColor=AACDEE" width="100%" alt="Arthur Stelzner — Desenvolvedor Back End" />
 </div>
 
 <div align="center">
-  <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=22&pause=1000&color=E4C789&center=true&vCenter=true&width=650&lines=Desenvolvedor+Back+End;PHP+%E2%80%A2+Python+%E2%80%A2+Node.js;JavaScript+%E2%80%A2+TypeScript+%E2%80%A2+Docker;MySQL+%E2%80%A2+Git+%E2%80%A2+HTML5+%E2%80%A2+CSS3;Apaixonado+por+tecnologia" alt="Animação de texto com a stack principal" />
+  <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=22&pause=1000&color=AACDEE&center=true&vCenter=true&width=650&lines=Desenvolvedor+Back+End;PHP+%E2%80%A2+Python+%E2%80%A2+Node.js;JavaScript+%E2%80%A2+TypeScript+%E2%80%A2+Docker;MySQL+%E2%80%A2+Git+%E2%80%A2+HTML5+%E2%80%A2+CSS3;Apaixonado+por+tecnologia" alt="Animação de texto com a stack principal" />
 </div>
 
 <p align="center">
-  <img src="https://api.visitorbadge.io/api/visitors?path=https%3A%2F%2Fgithub.com%2FThurStelZner&label=visitas&labelColor=%236E472E&countColor=%239D5C3B" alt="Contador de visitas" />
+  <img src="https://api.visitorbadge.io/api/visitors?path=https%3A%2F%2Fgithub.com%2FThurStelZner&label=visitas&labelColor=%232B598F&countColor=%235B698A" alt="Contador de visitas" />
   &nbsp;
-  <a href="mailto:arthurstelzner@gmail.com"><img src="https://img.shields.io/badge/Email-Fale+comigo-9D5C3B?style=for-the-badge&logo=gmail&logoColor=white" alt="E-mail" /></a>
+  <a href="mailto:arthurstelzner@gmail.com"><img src="https://img.shields.io/badge/Email-Fale+comigo-5B698A?style=for-the-badge&logo=gmail&logoColor=white" alt="E-mail" /></a>
 </p>
 
 ---
@@ -21,39 +21,39 @@
 <h3 align="center">Back-end & Linguagens</h3>
 
 <p align="center">
-  <img src="https://img.shields.io/badge/PHP-4B3B2F?style=for-the-badge&logo=php&logoColor=white" alt="PHP" />
+  <img src="https://img.shields.io/badge/PHP-564C55?style=for-the-badge&logo=php&logoColor=white" alt="PHP" />
   &nbsp;
-  <img src="https://img.shields.io/badge/Python-86583C?style=for-the-badge&logo=python&logoColor=white" alt="Python" />
+  <img src="https://img.shields.io/badge/Python-233044?style=for-the-badge&logo=python&logoColor=white" alt="Python" />
   &nbsp;
-  <img src="https://img.shields.io/badge/Node.js-6E472E?style=for-the-badge&logo=nodedotjs&logoColor=white" alt="Node.js" />
+  <img src="https://img.shields.io/badge/Node.js-2B598F?style=for-the-badge&logo=nodedotjs&logoColor=white" alt="Node.js" />
 </p>
 
 <p align="center">
-  <img src="https://img.shields.io/badge/JavaScript-9D5C3B?style=for-the-badge&logo=javascript&logoColor=white" alt="JavaScript" />
+  <img src="https://img.shields.io/badge/JavaScript-5B698A?style=for-the-badge&logo=javascript&logoColor=white" alt="JavaScript" />
   &nbsp;
-  <img src="https://img.shields.io/badge/TypeScript-4B3B2F?style=for-the-badge&logo=typescript&logoColor=white" alt="TypeScript" />
+  <img src="https://img.shields.io/badge/TypeScript-564C55?style=for-the-badge&logo=typescript&logoColor=white" alt="TypeScript" />
   &nbsp;
-  <img src="https://img.shields.io/badge/C-815333?style=for-the-badge&logo=c&logoColor=white" alt="C" />
+  <img src="https://img.shields.io/badge/C-506882?style=for-the-badge&logo=c&logoColor=white" alt="C" />
   &nbsp;
-  <img src="https://img.shields.io/badge/C%2B%2B-86583C?style=for-the-badge&logo=cplusplus&logoColor=white" alt="C++" />
+  <img src="https://img.shields.io/badge/C%2B%2B-233044?style=for-the-badge&logo=cplusplus&logoColor=white" alt="C++" />
 </p>
 
 <h3 align="center">Banco de Dados & Ferramentas</h3>
 
 <p align="center">
-  <img src="https://img.shields.io/badge/MySQL-4B3B2F?style=for-the-badge&logo=mysql&logoColor=white" alt="MySQL" />
+  <img src="https://img.shields.io/badge/MySQL-564C55?style=for-the-badge&logo=mysql&logoColor=white" alt="MySQL" />
   &nbsp;
-  <img src="https://img.shields.io/badge/Docker-9D5C3B?style=for-the-badge&logo=docker&logoColor=white" alt="Docker" />
+  <img src="https://img.shields.io/badge/Docker-5B698A?style=for-the-badge&logo=docker&logoColor=white" alt="Docker" />
   &nbsp;
-  <img src="https://img.shields.io/badge/Git-4B3B2F?style=for-the-badge&logo=git&logoColor=white" alt="Git" />
+  <img src="https://img.shields.io/badge/Git-564C55?style=for-the-badge&logo=git&logoColor=white" alt="Git" />
 </p>
 
 <h3 align="center">Front-end</h3>
 
 <p align="center">
-  <img src="https://img.shields.io/badge/HTML5-86583C?style=for-the-badge&logo=html5&logoColor=white" alt="HTML5" />
+  <img src="https://img.shields.io/badge/HTML5-233044?style=for-the-badge&logo=html5&logoColor=white" alt="HTML5" />
   &nbsp;
-  <img src="https://img.shields.io/badge/CSS3-815333?style=for-the-badge&logo=css&logoColor=white" alt="CSS3" />
+  <img src="https://img.shields.io/badge/CSS3-506882?style=for-the-badge&logo=css&logoColor=white" alt="CSS3" />
 </p>
 
 <h3 align="center">Cursos &amp; Certificações</h3>
@@ -61,11 +61,11 @@
 <p align="center"><em>Cibersegurança — Cisco Networking Academy</em></p>
 
 <p align="center">
-  <img src="https://img.shields.io/badge/Introdu%C3%A7%C3%A3o_%C3%A0_Ciberseguran%C3%A7a-Cisco-9D5C3B?style=for-the-badge&logo=cisco&logoColor=white" alt="Introdução à Cibersegurança — Cisco Networking Academy" />
+  <img src="https://img.shields.io/badge/Introdu%C3%A7%C3%A3o_%C3%A0_Ciberseguran%C3%A7a-Cisco-5B698A?style=for-the-badge&logo=cisco&logoColor=white" alt="Introdução à Cibersegurança — Cisco Networking Academy" />
   <br/>
-  <img src="https://img.shields.io/badge/Seguran%C3%A7a_de_Endpoint-Cisco-4B3B2F?style=for-the-badge&logo=cisco&logoColor=white" alt="Segurança de Endpoint — Cisco Networking Academy" />
+  <img src="https://img.shields.io/badge/Seguran%C3%A7a_de_Endpoint-Cisco-564C55?style=for-the-badge&logo=cisco&logoColor=white" alt="Segurança de Endpoint — Cisco Networking Academy" />
   <br/>
-  <img src="https://img.shields.io/badge/Defesa_de_Rede-Cisco-4B3B2F?style=for-the-badge&logo=cisco&logoColor=white" alt="Defesa de Rede — Cisco Networking Academy" />
+  <img src="https://img.shields.io/badge/Defesa_de_Rede-Cisco-564C55?style=for-the-badge&logo=cisco&logoColor=white" alt="Defesa de Rede — Cisco Networking Academy" />
 </p>
 
 ---
@@ -109,7 +109,7 @@ const arthur = {
 </p>
 
 <p align="center">
-  <img src="https://capsule-render.vercel.app/api?type=rect&height=3&color=0:422F22,50:64371D,100:D9A775" width="70%" alt="Divisor" />
+  <img src="https://capsule-render.vercel.app/api?type=rect&height=3&color=0:212636,50:273E5C,100:CAE6F2" width="70%" alt="Divisor" />
 </p>
 
 ---
@@ -143,21 +143,21 @@ const arthur = {
 <p align="center"><em>Aberto a conversas sobre tecnologia, back end, open source e novas ideias.</em></p>
 
 <p align="center">
-  <a href="http://br.linkedin.com/in/arthur-iantas-stelzner-867a392b5"><img src="https://img.shields.io/badge/LinkedIn-4B3B2F?style=for-the-badge&logo=data%3Aimage%2Fsvg%2Bxml%3Bbase64%2CPHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNCAyNCI%2BPHBhdGggZmlsbD0iI2ZmZiIgZD0iTTIwLjQ0NyAyMC40NTJoLTMuNTU0di01LjU2OWMwLTEuMzI4LS4wMjctMy4wMzctMS44NTItMy4wMzctMS44NTMgMC0yLjEzNiAxLjQ0NS0yLjEzNiAyLjkzOXY1LjY2N0g5LjM1MVY5aDMuNDE0djEuNTYxaC4wNDZjLjQ3Ny0uOSAxLjYzNy0xLjg1IDMuMzctMS44NSAzLjYwMSAwIDQuMjY3IDIuMzcgNC4yNjcgNS40NTV2Ni4yODZ6TTUuMzM3IDcuNDMzYy0xLjE0NCAwLTIuMDYzLS45MjYtMi4wNjMtMi4wNjUgMC0xLjEzOC45Mi0yLjA2MyAyLjA2My0yLjA2MyAxLjE0IDAgMi4wNjQuOTI1IDIuMDY0IDIuMDYzIDAgMS4xMzktLjkyNSAyLjA2NS0yLjA2NCAyLjA2NXptMS43ODIgMTMuMDE5SDMuNTU1VjloMy41NjR2MTEuNDUyek0yMi4yMjUgMEgxLjc3MUMuNzkyIDAgMCAuNzc0IDAgMS43Mjl2MjAuNTQyQzAgMjMuMjI3Ljc5MiAyNCAxLjc3MSAyNGgyMC40NTFDMjMuMiAyNCAyNCAyMy4yMjcgMjQgMjIuMjcxVjEuNzI5QzI0IC43NzQgMjMuMiAwIDIyLjIyMiAwaC4wMDN6Ii8%2BPC9zdmc%2B&logoColor=white" alt="LinkedIn" /></a>
+  <a href="http://br.linkedin.com/in/arthur-iantas-stelzner-867a392b5"><img src="https://img.shields.io/badge/LinkedIn-564C55?style=for-the-badge&logo=data%3Aimage%2Fsvg%2Bxml%3Bbase64%2CPHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNCAyNCI%2BPHBhdGggZmlsbD0iI2ZmZiIgZD0iTTIwLjQ0NyAyMC40NTJoLTMuNTU0di01LjU2OWMwLTEuMzI4LS4wMjctMy4wMzctMS44NTItMy4wMzctMS44NTMgMC0yLjEzNiAxLjQ0NS0yLjEzNiAyLjkzOXY1LjY2N0g5LjM1MVY5aDMuNDE0djEuNTYxaC4wNDZjLjQ3Ny0uOSAxLjYzNy0xLjg1IDMuMzctMS44NSAzLjYwMSAwIDQuMjY3IDIuMzcgNC4yNjcgNS40NTV2Ni4yODZ6TTUuMzM3IDcuNDMzYy0xLjE0NCAwLTIuMDYzLS45MjYtMi4wNjMtMi4wNjUgMC0xLjEzOC45Mi0yLjA2MyAyLjA2My0yLjA2MyAxLjE0IDAgMi4wNjQuOTI1IDIuMDY0IDIuMDYzIDAgMS4xMzktLjkyNSAyLjA2NS0yLjA2NCAyLjA2NXptMS43ODIgMTMuMDE5SDMuNTU1VjloMy41NjR2MTEuNDUyek0yMi4yMjUgMEgxLjc3MUMuNzkyIDAgMCAuNzc0IDAgMS43Mjl2MjAuNTQyQzAgMjMuMjI3Ljc5MiAyNCAxLjc3MSAyNGgyMC40NTFDMjMuMiAyNCAyNCAyMy4yMjcgMjQgMjIuMjcxVjEuNzI5QzI0IC43NzQgMjMuMiAwIDIyLjIyMiAwaC4wMDN6Ii8%2BPC9zdmc%2B&logoColor=white" alt="LinkedIn" /></a>
   &nbsp;
-  <a href="https://instagram.com/_.thurst._"><img src="https://img.shields.io/badge/Instagram-9D5C3B?style=for-the-badge&logo=instagram&logoColor=white" alt="Instagram" /></a>
+  <a href="https://instagram.com/_.thurst._"><img src="https://img.shields.io/badge/Instagram-5B698A?style=for-the-badge&logo=instagram&logoColor=white" alt="Instagram" /></a>
   &nbsp;
-  <a href="https://thurstelzner.github.io/MeuPortfolio/"><img src="https://img.shields.io/badge/Portf%C3%B3lio-815333?style=for-the-badge&logo=googlechrome&logoColor=white" alt="Portfólio" /></a>
+  <a href="https://thurstelzner.github.io/MeuPortfolio/"><img src="https://img.shields.io/badge/Portf%C3%B3lio-506882?style=for-the-badge&logo=googlechrome&logoColor=white" alt="Portfólio" /></a>
   &nbsp;
-  <img src="https://img.shields.io/badge/Discord-4B3B2F?style=for-the-badge&logo=discord&logoColor=white" alt="Discord" />
+  <img src="https://img.shields.io/badge/Discord-564C55?style=for-the-badge&logo=discord&logoColor=white" alt="Discord" />
   &nbsp;
-  <a href="https://github.com/ThurStelZner"><img src="https://img.shields.io/badge/GitHub-6E472E?style=for-the-badge&logo=github&logoColor=white" alt="GitHub" /></a>
+  <a href="https://github.com/ThurStelZner"><img src="https://img.shields.io/badge/GitHub-2B598F?style=for-the-badge&logo=github&logoColor=white" alt="GitHub" /></a>
 </p>
 
 <br/>
 
 <p align="center">
-  <img src="https://capsule-render.vercel.app/api?type=waving&height=110&section=footer&color=0:D9A775,50:64371D,100:160F0E" width="100%" alt="Rodapé" />
+  <img src="https://capsule-render.vercel.app/api?type=waving&height=110&section=footer&color=0:CAE6F2,50:273E5C,100:060507" width="100%" alt="Rodapé" />
 </p>
 
 <!-- As cores acima são geradas automaticamente a partir do avatar por .github/scripts/palette.py -->
