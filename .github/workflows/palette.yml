@@ -2,7 +2,7 @@ name: Detectar troca de avatar e atualizar paleta
 
 on:
   schedule:
-    - cron: "*/5 * * * *" # a cada 5 minutos (mínimo do GitHub)
+    - cron: "*/5 * * * *" # fallback: o agendador do GitHub pode atrasar bastante
   workflow_dispatch:
     inputs:
       force_palette:
@@ -24,56 +24,87 @@ permissions:
 
 concurrency:
   group: profile-palette
-  cancel-in-progress: false
+  cancel-in-progress: true
 
 jobs:
   palette:
+    # O agendador do GitHub pode atrasar horas. Para não depender dele, o job
+    # fica em loop checando a cada 5 min e se re-dispara antes do limite de 6h.
     runs-on: ubuntu-latest
+    timeout-minutes: 355
+    env:
+      GH_TOKEN: ${{ secrets.GH_PAT || secrets.GITHUB_TOKEN }}
+      FORCE_INPUT: ${{ github.event.inputs.force_palette || 'false' }}
     steps:
       - uses: actions/checkout@v5
 
-      - name: Verificar hash do avatar
-        id: check
-        env:
-          FORCE_PALETTE: ${{ github.event.inputs.force_palette || 'false' }}
-        run: python3 .github/scripts/palette.py --check
-
-      - name: Configurar Python
-        if: steps.check.outputs.changed == 'true'
-        uses: actions/setup-python@v5
-        with:
-          python-version: "3.12"
-
-      - name: Instalar Pillow
-        if: steps.check.outputs.changed == 'true'
-        run: python -m pip install --disable-pip-version-check pillow
-
-      - name: Gerar nova paleta
-        if: steps.check.outputs.changed == 'true'
-        id: palette
-        env:
-          FORCE_PALETTE: ${{ github.event.inputs.force_palette || 'false' }}
-        run: python .github/scripts/palette.py
-
-      - name: Publicar paleta
-        if: steps.palette.outputs.changed == 'true'
+      - name: Monitorar avatar em loop
+        shell: bash
         run: |
+          set -uo pipefail
+
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add README.md .github/palette.json conf/github-profile-3d-contrib.json
-          if git diff --cached --quiet; then
-            echo "Sem alterações de paleta para publicar."
-            exit 0
-          fi
-          git commit -m "Atualiza paleta do perfil a partir do avatar"
-          git push
 
-      - name: Atualizar cards, 3D e cobrinha
-        if: steps.palette.outputs.changed == 'true'
-        continue-on-error: true
-        env:
-          GH_TOKEN: ${{ secrets.GH_PAT || secrets.GITHUB_TOKEN }}
-        run: |
-          gh workflow run cards.yml --ref main
-          gh workflow run profile-3d-contrib.yml --ref main
-          gh workflow run snake.yml --ref main
+          for i in $(seq 1 66); do
+            echo "::group::Verificação $i/66"
+
+            if [ "$i" -eq 1 ] && [ "${FORCE_INPUT:-false}" = "true" ]; then
+              export FORCE_PALETTE=true
+            else
+              export FORCE_PALETTE=false
+            fi
+
+            rm -f /tmp/palette-check.json
+            python3 .github/scripts/palette.py --check > /tmp/palette-check.json 2>/tmp/palette-check.err || true
+            changed=$(python3 -c 'import json; print(json.load(open("/tmp/palette-check.json")).get("changed", "false"))' 2>/dev/null || echo "false")
+
+            if [ "$changed" = "true" ]; then
+              echo "Avatar mudou; gerando nova paleta..."
+              if python3 -m pip install --disable-pip-version-check pillow >/tmp/pip.log 2>&1; then
+                if python3 .github/scripts/palette.py; then
+                  git add README.md .github/palette.json conf/github-profile-3d-contrib.json
+                  if git diff --cached --quiet; then
+                    echo "Sem alterações de paleta para publicar."
+                  else
+                    git commit -m "Atualiza paleta do perfil a partir do avatar"
+                    if git pull --rebase origin main && git push; then
+                      echo "Paleta publicada. Disparando cards, 3D e cobrinha..."
+                      for workflow in cards.yml profile-3d-contrib.yml snake.yml; do
+                        for attempt in 1 2 3; do
+                          if gh workflow run "$workflow" --ref main; then
+                            break
+                          fi
+                          sleep 5
+                        done
+                      done
+                    else
+                      echo "Falha ao publicar; desfazendo commit local para tentar de novo."
+                      git rebase --abort 2>/dev/null || true
+                      git reset --hard HEAD~1
+                    fi
+                  fi
+                else
+                  echo "Falha ao gerar a paleta; tentando novamente na próxima verificação."
+                fi
+              else
+                echo "Falha ao instalar Pillow; tentando novamente na próxima verificação."
+              fi
+            else
+              echo "Avatar sem mudanças."
+            fi
+
+            echo "::endgroup::"
+
+            if [ "$i" -lt 66 ]; then
+              sleep 300
+            fi
+          done
+
+          echo "Reiniciando o monitor para manter a checagem a cada 5 minutos..."
+          for attempt in 1 2 3; do
+            if gh workflow run palette.yml --ref main; then
+              break
+            fi
+            sleep 10
+          done
