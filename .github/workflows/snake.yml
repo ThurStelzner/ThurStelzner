@@ -19,6 +19,10 @@ jobs:
     steps:
       - uses: actions/checkout@v5
 
+      - name: Ler paleta do perfil
+        id: palette
+        run: python .github/scripts/palette.py --outputs-only
+
       - uses: Platane/snk@v3
         with:
           github_user_name: ${{ github.repository_owner }}
@@ -26,8 +30,8 @@ jobs:
           # privados. Se o segredo ainda não existir, usa o token padrão do Actions.
           github_token: ${{ secrets.GH_PAT || github.token }}
           outputs: |
-            dist/github-contribution-grid-snake.svg?color_snake=%239333EA&color_dots=%23F3E8FF,%23E9D5FF,%23D8B4FE,%23C084FC,%23A855F7
-            dist/github-contribution-grid-snake-dark.svg?color_snake=%23FF3EA5&color_dots=%232E1065,%235B21B6,%239333EA,%23D946EF,%23FF3EA5
+            dist/github-contribution-grid-snake.svg?color_snake=%23${{ steps.palette.outputs.snake_light_snake }}&color_dots=${{ steps.palette.outputs.snake_light_dots }}
+            dist/github-contribution-grid-snake-dark.svg?color_snake=%23${{ steps.palette.outputs.snake_dark_snake }}&color_dots=${{ steps.palette.outputs.snake_dark_dots }}
 
       # publica os SVGs no branch "output", referenciado pelo README
       - name: Publicar SVGs no branch output

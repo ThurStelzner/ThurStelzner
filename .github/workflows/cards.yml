@@ -1,24 +1,62 @@
-name: Atualizar cards de estatísticas (público + privado)
+name: Atualizar paleta e cards de estatísticas (público + privado)
 
 on:
   schedule:
     - cron: "12 */6 * * *" # a cada 6 horas
   workflow_dispatch: # permite rodar manualmente
+    inputs:
+      force_palette:
+        description: "Recalcular a paleta mesmo sem mudança no avatar"
+        type: boolean
+        default: false
   push:
     branches:
       - main
     paths:
       - ".github/workflows/cards.yml"
+      - ".github/scripts/palette.py"
+      - ".github/palette.json"
       - "README.md"
 
 permissions:
   contents: write
+
+concurrency:
+  group: profile-cards
+  cancel-in-progress: false
 
 jobs:
   cards:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v5
+
+      - name: Configurar Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Instalar Pillow
+        run: python -m pip install --disable-pip-version-check pillow
+
+      - name: Atualizar paleta a partir do avatar
+        id: palette
+        env:
+          FORCE_PALETTE: ${{ github.event.inputs.force_palette || 'false' }}
+        run: python .github/scripts/palette.py
+
+      - name: Publicar paleta
+        if: steps.palette.outputs.changed == 'true'
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add README.md .github/palette.json conf/github-profile-3d-contrib.json
+          if git diff --cached --quiet; then
+            echo "Sem alterações de paleta para publicar."
+            exit 0
+          fi
+          git commit -m "Atualiza paleta do perfil a partir do avatar"
+          git push
 
       - name: Criar pasta profile
         run: mkdir -p profile
@@ -27,7 +65,7 @@ jobs:
         uses: stats-organization/github-readme-stats-action@v2
         with:
           card: stats
-          options: "username=${{ github.repository_owner }}&show_icons=true&hide_border=true&title_color=C77DFF&icon_color=FF3EA5&text_color=D8B4FE&bg_color=45,1A0533,3B0764&border_color=9333EA"
+          options: "${{ steps.palette.outputs.stats_options }}"
           path: profile/estatisticas.svg
           token: ${{ secrets.GH_PAT || secrets.GITHUB_TOKEN }}
           fail_on_error: true
@@ -36,7 +74,7 @@ jobs:
         uses: stats-organization/github-readme-stats-action@v2
         with:
           card: top-langs
-          options: "username=${{ github.repository_owner }}&layout=compact&langs_count=10&hide_border=true&title_color=C77DFF&icon_color=FF3EA5&text_color=D8B4FE&bg_color=45,1A0533,3B0764&border_color=9333EA"
+          options: "${{ steps.palette.outputs.langs_options }}"
           path: profile/linguagens.svg
           token: ${{ secrets.GH_PAT || secrets.GITHUB_TOKEN }}
           fail_on_error: true
@@ -44,14 +82,18 @@ jobs:
       - name: Gerar card de sequência
         uses: DenverCoder1/github-readme-streak-stats@v1
         with:
-          options: "user=${{ github.repository_owner }}&hide_border=true&background=45,1A0533,3B0764&border=9333EA&stroke=7C3AED&ring=D946EF&fire=FF3EA5&currStreakNum=F0ABFC&currStreakLabel=C77DFF&sideNums=D8B4FE&sideLabels=A78BFA&dates=8B7AA8&locale=pt_BR&date_format=j%2Fn%2F%5BY%5D&disable_animations=true"
+          options: "${{ steps.palette.outputs.streak_options }}"
           path: profile/sequencia.svg
           token: ${{ secrets.GH_PAT || secrets.GITHUB_TOKEN }}
 
-      - name: Publicar cards atualizados
+      - name: Publicar cards
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add profile/*.svg
-          git commit -m "Atualiza cards de estatísticas (público + privado)" || exit 0
+          if git diff --cached --quiet; then
+            echo "Sem alterações nos cards para publicar."
+            exit 0
+          fi
+          git commit -m "Atualiza cards de estatísticas (público + privado)"
           git push
