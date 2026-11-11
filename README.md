@@ -68,6 +68,16 @@
   <img src="https://img.shields.io/badge/Defesa_de_Rede-Cisco-715644?style=for-the-badge&logo=cisco&logoColor=white" alt="Defesa de Rede — Cisco Networking Academy" />
 </p>
 
+<p align="center"><em>Cursos — SENAI</em></p>
+
+<p align="center">
+  <img src="https://img.shields.io/badge/T%C3%A9cnico_em_Desenvolvimento_de_Sistemas-SENAI-784628?style=for-the-badge" alt="Técnico em Desenvolvimento de Sistemas — SENAI" />
+  <br/>
+  <img src="https://img.shields.io/badge/Circuitos_Eletr%C3%B4nicos_Automatizados-SENAI-715644?style=for-the-badge" alt="Circuitos Eletrônicos Automatizados — SENAI" />
+  <br/>
+  <img src="https://img.shields.io/badge/Produtividade_e_Difus%C3%A3o_Tecnol%C3%B3gica_na_Ind%C3%BAstria-SENAI-8F6B56?style=for-the-badge" alt="Produtividade e Difusão Tecnológica na Indústria — SENAI" />
+</p>
+
 ---
 
 ## Sobre mim
