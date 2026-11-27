@@ -65,6 +65,12 @@ jobs:
           USERNAME: ${{ github.repository_owner }}
           SETTING_JSON: conf/github-profile-3d-contrib.json
 
+      # A action desenha um grafico de rosca de linguagens embutido que fica
+      # sempre errado ("CSS + other") com token fine-grained, e nao ha opcao
+      # para desliga-lo. Removemos esse grupo dos SVGs antes de publicar.
+      - name: Remover grafico de rosca de linguagens dos SVGs
+        run: node .github/scripts/remove-pie.js profile-3d-contrib
+
       # publica os SVGs no branch "output-3d-contrib", referenciado pelo README
       - name: Publicar SVGs no branch output-3d-contrib
         uses: crazy-max/ghaction-github-pages@v3.1.0
