@@ -110,12 +110,12 @@ const arthur = {
 ## Estatísticas do GitHub
 
 <p align="center">
-  <img height="170" alt="Estatísticas do GitHub (públicas e privadas)" src="./profile/estatisticas.svg?v=priv20261127" />
-  <img height="170" alt="Linguagens mais utilizadas (públicas e privadas)" src="./profile/linguagens.svg?v=priv20261127" />
+  <img height="170" alt="Estatísticas do GitHub (públicas e privadas)" src="./profile/estatisticas.svg?v=priv20261127b" />
+  <img height="170" alt="Linguagens mais utilizadas (públicas e privadas)" src="./profile/linguagens.svg?v=priv20261127b" />
 </p>
 
 <p align="center">
-  <img alt="Sequência de contribuições (públicas e privadas)" src="./profile/sequencia.svg?v=priv20261127" />
+  <img alt="Sequência de contribuições (públicas e privadas)" src="./profile/sequencia.svg?v=priv20261127b" />
 </p>
 
 <p align="center">
@@ -128,9 +128,9 @@ const arthur = {
 
 <p align="center">
   <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/ThurStelZner/ThurStelZner/output-3d-contrib/night.svg?v=priv20261127" />
-    <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/ThurStelZner/ThurStelZner/output-3d-contrib/day.svg?v=priv20261127" />
-    <img alt="Gráfico 3D de contribuições do GitHub" src="https://raw.githubusercontent.com/ThurStelZner/ThurStelZner/output-3d-contrib/night.svg?v=priv20261127" width="85%" />
+    <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/ThurStelZner/ThurStelZner/output-3d-contrib/night.svg?v=priv20261127b" />
+    <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/ThurStelZner/ThurStelZner/output-3d-contrib/day.svg?v=priv20261127b" />
+    <img alt="Gráfico 3D de contribuições do GitHub" src="https://raw.githubusercontent.com/ThurStelZner/ThurStelZner/output-3d-contrib/night.svg?v=priv20261127b" width="85%" />
   </picture>
 </p>
 
@@ -140,9 +140,9 @@ const arthur = {
 
 <p align="center">
   <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/ThurStelZner/ThurStelZner/output/github-contribution-grid-snake-dark.svg?v=priv20261127" />
-    <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/ThurStelZner/ThurStelZner/output/github-contribution-grid-snake.svg?v=priv20261127" />
-    <img alt="Animação da cobrinha percorrendo o calendário de contribuições" src="https://raw.githubusercontent.com/ThurStelZner/ThurStelZner/output/github-contribution-grid-snake.svg?v=priv20261127" width="100%" />
+    <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/ThurStelZner/ThurStelZner/output/github-contribution-grid-snake-dark.svg?v=priv20261127b" />
+    <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/ThurStelZner/ThurStelZner/output/github-contribution-grid-snake.svg?v=priv20261127b" />
+    <img alt="Animação da cobrinha percorrendo o calendário de contribuições" src="https://raw.githubusercontent.com/ThurStelZner/ThurStelZner/output/github-contribution-grid-snake.svg?v=priv20261127b" width="100%" />
   </picture>
 </p>
 
