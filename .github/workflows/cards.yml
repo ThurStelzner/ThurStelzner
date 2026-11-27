@@ -26,6 +26,22 @@ jobs:
     steps:
       - uses: actions/checkout@v5
 
+      - name: Validar GH_PAT
+        id: token
+        env:
+          GH_PAT: ${{ secrets.GH_PAT }}
+        run: |
+          if [ -n "${GH_PAT:-}" ] && curl -fsS -o /dev/null \
+              -H "Authorization: Bearer ${GH_PAT}" \
+              -H "Accept: application/vnd.github+json" \
+              https://api.github.com/user; then
+            echo "value=${GH_PAT}" >> "$GITHUB_OUTPUT"
+            echo "Usando o secret GH_PAT (inclui contribuicoes de repos privados)."
+          else
+            echo "value=${{ secrets.GITHUB_TOKEN }}" >> "$GITHUB_OUTPUT"
+            echo "::warning title=GH_PAT invalido::O secret GH_PAT esta ausente, expirado ou revogado (401). Usando o GITHUB_TOKEN padrao; contribuicoes de repositorios privados NAO serao contadas ate renovar o GH_PAT."
+          fi
+
       - name: Ler paleta atual
         id: palette
         run: python3 .github/scripts/palette.py --outputs-only
@@ -39,7 +55,7 @@ jobs:
           card: stats
           options: "${{ steps.palette.outputs.stats_options }}"
           path: profile/estatisticas.svg
-          token: ${{ secrets.GH_PAT || secrets.GITHUB_TOKEN }}
+          token: ${{ steps.token.outputs.value }}
           fail_on_error: true
 
       - name: Gerar card de linguagens
@@ -48,7 +64,7 @@ jobs:
           card: top-langs
           options: "${{ steps.palette.outputs.langs_options }}"
           path: profile/linguagens.svg
-          token: ${{ secrets.GH_PAT || secrets.GITHUB_TOKEN }}
+          token: ${{ steps.token.outputs.value }}
           fail_on_error: true
 
       - name: Gerar card de sequência
@@ -56,7 +72,7 @@ jobs:
         with:
           options: "${{ steps.palette.outputs.streak_options }}"
           path: profile/sequencia.svg
-          token: ${{ secrets.GH_PAT || secrets.GITHUB_TOKEN }}
+          token: ${{ steps.token.outputs.value }}
 
       - name: Publicar cards
         run: |

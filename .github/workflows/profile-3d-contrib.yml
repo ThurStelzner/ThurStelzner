@@ -20,11 +20,27 @@ jobs:
     steps:
       - uses: actions/checkout@v5
 
+      - name: Validar GH_PAT
+        id: token
+        env:
+          GH_PAT: ${{ secrets.GH_PAT }}
+        run: |
+          if [ -n "${GH_PAT:-}" ] && curl -fsS -o /dev/null \
+              -H "Authorization: Bearer ${GH_PAT}" \
+              -H "Accept: application/vnd.github+json" \
+              https://api.github.com/user; then
+            echo "value=${GH_PAT}" >> "$GITHUB_OUTPUT"
+            echo "Usando o secret GH_PAT (inclui contribuicoes de repos privados)."
+          else
+            echo "value=${{ github.token }}" >> "$GITHUB_OUTPUT"
+            echo "::warning title=GH_PAT invalido::O secret GH_PAT esta ausente, expirado ou revogado (401). Usando o GITHUB_TOKEN padrao; contribuicoes de repositorios privados NAO serao contadas ate renovar o GH_PAT."
+          fi
+
       - uses: yoshi389111/github-profile-3d-contrib@latest
         env:
-          # Token pessoal (secret GH_PAT) para incluir contribuições de repos
-          # privados. Se o segredo ainda não existir, usa o token padrão do Actions.
-          GITHUB_TOKEN: ${{ secrets.GH_PAT || github.token }}
+          # Token pessoal (secret GH_PAT) valido para incluir contribuicoes de
+          # repos privados; se estiver ausente/invalido, cai no token padrao.
+          GITHUB_TOKEN: ${{ steps.token.outputs.value }}
           USERNAME: ${{ github.repository_owner }}
           SETTING_JSON: conf/github-profile-3d-contrib.json
 
